@@ -1,5 +1,5 @@
 <template>
-  <div class="container column">
+  <div class="container column resume-container">
     <form-component
         @onFormSubmit="getFormData"
     />
@@ -10,11 +10,17 @@
     />
   </div>
   <div class="container">
-    <p>
-      <button class="btn primary" @click="loadResume">Выгрузить все резюме</button>
-      <button @click="uploadResume" class="btn primary" :disabled="isValidResume">Загрузить на сервер</button>
-      <button class="btn primary" @click="cleanResume">Очистить бланк</button>
-    </p>
+    <div class="button-container">
+      <div class="button-item">
+        <button class="btn primary" @click="loadResume">Выгрузить все резюме</button>
+      </div>
+      <div class="button-item">
+        <button @click="uploadResume" class="btn primary" :disabled="isValidResume">Загрузить на сервер</button>
+      </div>
+      <div class="button-item">
+        <button class="btn primary" @click="cleanResume">Очистить бланк</button>
+      </div>
+    </div>
     <loader-component v-if="isLoading"/>
 
     <all-resume-component v-else
@@ -101,4 +107,24 @@ export default {
   height: auto;
   border-radius: 50%;
 }
+.resume-container{
+  flex-wrap: wrap;
+  column-gap: 12px;
+  row-gap: 12px;
+  justify-content: space-between;
+}
+.button-container{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 12px;
+  .button-item{
+    flex: 1 1 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+}
+
 </style>

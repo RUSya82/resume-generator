@@ -1,5 +1,5 @@
 <template>
-  <div class="card card-w70">
+  <div class="card result-card">
     <div v-if="resume.length > 0">
       <component :is="getComponentName(item.type)" v-for="item in resume" :text="item.text"/>
     </div>
@@ -37,3 +37,9 @@ export default {
 
 }
 </script>
+<style scoped lang="scss">
+.result-card{
+  flex: 1 0 60%;
+  min-width: 500px;
+}
+</style>

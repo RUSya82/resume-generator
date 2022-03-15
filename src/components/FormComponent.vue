@@ -1,5 +1,5 @@
 <template>
-  <form class="card card-w30" @submit.prevent="submitForm">
+  <form class="card resume-form" @submit.prevent="submitForm">
     <div class="form-control">
       <label for="type">Тип блока</label>
       <select id="type" v-model="formData.type">
@@ -42,3 +42,11 @@ export default {
   }
 }
 </script>
+<style scoped lang="scss">
+.resume-form{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 30%;
+  min-width: 250px;
+}
+</style>
