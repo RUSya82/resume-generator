@@ -1,26 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <hero-view/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeroView from "@/views/HeroView";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HeroView,
   }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss" scoped>
+
 </style>
